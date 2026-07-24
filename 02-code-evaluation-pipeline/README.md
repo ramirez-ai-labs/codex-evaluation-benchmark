@@ -11,7 +11,7 @@ The goal is to understand:
 - How *edit distance* relates to acceptance and quality
 - How telemetry and evaluation data flow through a system
 
-This mirrors real workflows used by teams building tools like Copilot, Codex, and IDE agents.
+This mirrors real workflows used by teams building AI-assisted code generation tools and IDE agents.
 
 ---
 

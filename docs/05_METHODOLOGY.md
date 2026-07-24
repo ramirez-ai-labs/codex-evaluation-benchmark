@@ -1,10 +1,10 @@
-# Codex DS Showcase: Methodology & Approach
+# LLM Code Generation Evaluation: Methodology & Approach
 
-This document outlines the methodology, thought process, and design decisions behind this showcase repository. It demonstrates how a Data Scientist would approach measuring and improving AI developer tools.
+This document outlines the methodology, thought process, and design decisions behind this evaluation framework. It demonstrates how to approach measuring and improving AI-assisted developer tools through rigorous data science.
 
 ## Overview
 
-This repository showcases the skills required for the **Data Scientist, Codex** role at OpenAI:
+This repository implements a complete evaluation pipeline across six core competencies:
 
 1. **Product Metrics Definition**: Defining what "developer productivity" means
 2. **Experiment Design**: A/B testing model versions and features

@@ -1,7 +1,7 @@
 # Developer Telemetry Simulation (Beginner Friendly)
 
-This folder simulates **developer telemetry data** for an AI coding assistant
-(similar to GitHub Copilot / Codex–style systems).
+This folder simulates **developer telemetry data** for an AI-assisted code generation system
+(similar to GitHub Copilot or other code-generation LLM integrations).
 
 The goal is NOT to build a real IDE plugin.
 The goal is to understand:
@@ -170,9 +170,9 @@ This dataset lets you ask real product + ML questions, such as:
 
 These are the same questions asked by:
 
-- Codex Data Scientists
-- Copilot PMs
-- Applied ML teams
+- Data Scientists on AI developer tool teams
+- Product Managers and Analytics leads
+- Applied ML teams building code-generation systems
 
 ---
 
@@ -202,14 +202,9 @@ This folder is intentionally reusable across many analyses.
 
 ---
 
-### Why this README works for your repo
+### Why this README works for real-world projects
 
 - ✅ Beginner-friendly, no assumed telemetry background  
 - ✅ Explains *why* each file exists, not just what it does  
 - ✅ Mirrors how real AI platform teams document datasets  
-- ✅ Fits perfectly into your **Codex / Developer Experience / Applied ML** narrative  
-
-If you want, next we can:
-- Add a **first analysis notebook**
-- Write a **RESULTS.md** for this folder
-- Or connect this telemetry to your earlier **edit-distance → acceptance** work
+- ✅ Fits perfectly into **Developer Experience / Applied ML** contexts
