@@ -1,10 +1,10 @@
-# Getting Started: Beginner's Guide to Codex DS Showcase
+# Getting Started: Beginner's Guide to LLM Code Generation Evaluation
 
 Welcome! This guide will walk you through the repository step-by-step, explaining what each component does and how they work together.
 
 ## 🎯 What This Repository Does
 
-This repository simulates the work of a **Data Scientist** at OpenAI working on **Codex** (an AI coding assistant). It demonstrates:
+This repository implements a complete evaluation framework for **AI-assisted code generation**. It demonstrates:
 
 1. **Collecting data** about how developers use AI coding suggestions
 2. **Analyzing that data** to understand what works and what doesn't
@@ -491,7 +491,7 @@ python app.py all
 **Expected output:**
 ```
 ======================================================================
-Running Full Codex DS Showcase Pipeline
+Running Full LLM Code Generation Evaluation Pipeline
 ======================================================================
 
 🚀 Running: python developer-telemetry-simulation/simulate_telemetry.py
@@ -650,7 +650,7 @@ Now that you've explored everything:
 You've now explored a complete Data Science workflow for AI developer tools:
 - Data collection → Analysis → Statistical testing → Visualization → Recommendations
 
-This is exactly what a Data Scientist at OpenAI Codex does every day!
+This is exactly what Data Scientists working on AI code generation tools do every day!
 
 Happy exploring! 🚀
 

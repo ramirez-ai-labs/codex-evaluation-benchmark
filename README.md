@@ -1,7 +1,7 @@
-# OpenAI Codex Data Scientist Showcase  
-A complete, end-to-end portfolio demonstrating the skills required for the **OpenAI Data Scientist – Codex / Developer Tools** role.
+# LLM Developer Tools Evaluation Framework  
+A complete, end-to-end pipeline for analyzing developer telemetry, evaluating LLM code generation quality, running causal inference, and measuring developer productivity metrics.
 
-This repo simulates how a Codex DS analyzes developer telemetry, evaluates LLM code generation, runs causal inference, and measures developer productivity.
+This repository demonstrates real-world applied AI evaluation workflows used in measuring code generation model performance and developer impact.
 
 ---
 

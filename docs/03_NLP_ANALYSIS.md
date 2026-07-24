@@ -1,6 +1,6 @@
 # NLP Analysis for Code Generation
 
-This document explains how **Natural Language Processing (NLP)** skills are demonstrated in this repository, relevant to the Codex Data Scientist role.
+This document explains the **Natural Language Processing (NLP)** techniques used to analyze code generation quality, prompts, and semantic alignment.
 
 ## Why NLP Matters for Code Generation
 
@@ -241,14 +241,14 @@ python app.py nlp
 
 ---
 
-## NLP Skills Relevant to Codex DS Role
+## NLP Capabilities for Code Generation Evaluation
 
-### ✅ **Text Analysis**
+### **Text Analysis**
 - Analyzing prompts to understand complexity
 - Extracting features from code as text
 - Understanding error messages
 
-### ✅ **Semantic Understanding**
+### **Semantic Understanding**
 - Measuring code-to-prompt alignment
 - Understanding requirements from natural language
 - Semantic similarity beyond syntax
@@ -272,7 +272,7 @@ python app.py nlp
 
 ## Production Enhancements
 
-In a real Codex DS role, you'd enhance this with:
+In production deployments, you'd enhance this with:
 
 1. **Code Embeddings**: Use CodeBERT, GraphCodeBERT, or similar
 2. **AST Analysis**: Parse code into Abstract Syntax Trees
