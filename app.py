@@ -34,11 +34,11 @@ Each command corresponds to a subfolder in the repo.
 
 Directory Structure Recap:
 --------------------------
-openai-codex-ds-showcase/
+codex-evaluation-benchmark/
 │
-├── developer-telemetry-simulation/
-├── developer-productivity-analysis/
-├── code-evaluation-pipeline/
+├── 01-developer-telemetry-simulation/
+├── 02-code-evaluation-pipeline/
+├── 03-developer-productivity-analysis/
 └── dashboard/
 
 This app connects all of those parts.
@@ -62,50 +62,50 @@ def run(cmd: list, cwd: Path = None):
 
 def simulate():
     """Run synthetic telemetry generator."""
-    sim_file = ROOT / "developer-telemetry-simulation" / "simulate_telemetry.py"
+    sim_file = ROOT / "01-developer-telemetry-simulation" / "simulate_telemetry.py"
     run([sys.executable, str(sim_file)])
 
 
 def analyze():
     """Run productivity + acceptance-rate analysis."""
-    analysis_file = ROOT / "developer-productivity-analysis" / "acceptance_rate_model.py"
+    analysis_file = ROOT / "03-developer-productivity-analysis" / "acceptance_rate_model.py"
     run([sys.executable, str(analysis_file)])
 
 
 def sql_analysis():
     """Run SQL analysis queries."""
-    sql_file = ROOT / "developer-productivity-analysis" / "run_sql_analysis.py"
+    sql_file = ROOT / "03-developer-productivity-analysis" / "run_sql_analysis.py"
     run([sys.executable, str(sql_file)])
 
 
 def ab_test():
     """Run A/B testing framework."""
-    ab_file = ROOT / "developer-productivity-analysis" / "ab_testing_framework.py"
+    ab_file = ROOT / "03-developer-productivity-analysis" / "ab_testing_framework.py"
     run([sys.executable, str(ab_file)])
 
 
 def causal_inference():
     """Run causal inference analysis."""
-    causal_file = ROOT / "developer-productivity-analysis" / "causal_inference.py"
+    causal_file = ROOT / "03-developer-productivity-analysis" / "causal_inference.py"
     run([sys.executable, str(causal_file)])
 
 
 def nlp_analysis():
     """Run NLP analysis on code generation."""
-    nlp_file = ROOT / "developer-productivity-analysis" / "nlp_analysis.py"
+    nlp_file = ROOT / "03-developer-productivity-analysis" / "nlp_analysis.py"
     run([sys.executable, str(nlp_file)])
 
 
 def generate_code():
     """Generate model-written code for all tasks."""
-    gen_file = ROOT / "code-evaluation-pipeline" / "generate_code.py"
-    run([sys.executable, str(gen_file)], cwd=ROOT / "code-evaluation-pipeline")
+    gen_file = ROOT / "02-code-evaluation-pipeline" / "generate_code.py"
+    run([sys.executable, str(gen_file)], cwd=ROOT / "02-code-evaluation-pipeline")
 
 
 def evaluate():
     """Run correctness tests + compute edit distance."""
-    test_file = ROOT / "code-evaluation-pipeline" / "run_tests.py"
-    run([sys.executable, str(test_file)], cwd=ROOT / "code-evaluation-pipeline")
+    test_file = ROOT / "02-code-evaluation-pipeline" / "run_tests.py"
+    run([sys.executable, str(test_file)], cwd=ROOT / "02-code-evaluation-pipeline")
 
 
 def launch_dashboard():

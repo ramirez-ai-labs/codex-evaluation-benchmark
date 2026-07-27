@@ -81,8 +81,8 @@ def run_query(engine, query_name: str, query: str):
 def main():
     # Paths
     root = Path(__file__).parent.parent
-    csv_path = root / "developer-telemetry-simulation" / "telemetry_events.csv"
-    db_path = root / "developer-productivity-analysis" / "telemetry.db"
+    csv_path = root / "01-developer-telemetry-simulation" / "telemetry_events.csv"
+    db_path = root / "03-developer-productivity-analysis" / "telemetry.db"
     
     if not csv_path.exists():
         print(f"❌ Error: {csv_path} not found.")
