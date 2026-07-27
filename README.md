@@ -14,7 +14,7 @@ This repo is designed for **three audiences**, each with a guided path:
 Run the project in 5 minutes — no ML background required.
 
 ### 🛠️ Learners / Students → Understand the system  
-**👉 `/docs/02_GETTING_STARTED.md`**  
+**👉 `/docs/02_DEVELOPER_ANALYTICS_GUIDE.md`**  
 Step-by-step walkthrough of telemetry, evaluation, models, and dashboards.
 
 ### 🧠 Senior Reviewers / Hiring Managers → Deep technical reasoning  

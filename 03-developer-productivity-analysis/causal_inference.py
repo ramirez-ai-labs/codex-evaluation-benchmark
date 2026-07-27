@@ -61,15 +61,15 @@ def load_telemetry_data(csv_path: str = None) -> pd.DataFrame:
       ...
 
     These are used to measure causal effects such as:
-      “Does model_v2 increase acceptance?”
+      "Does model_v2 increase acceptance?"
     """
     if csv_path is None:
         root = Path(__file__).parent.parent
-        csv_path = root / "developer-telemetry-simulation" / "telemetry_events.csv"
-    
+        csv_path = root / "01-developer-telemetry-simulation" / "telemetry_events.csv"
+
     if not Path(csv_path).exists():
         raise FileNotFoundError(f"Telemetry data not found at {csv_path}")
-    
+
     return pd.read_csv(csv_path)
 
 
@@ -105,11 +105,11 @@ def estimate_ate_propensity_score_matching(
       1. Estimating the probability of receiving the treatment
          (propensity score)
       2. Matching treated users with similar untreated users
-         → balances the comparison
+         -> balances the comparison
     """
     if covariates is None:
         covariates = ["latency_ms", "suggestion_length", "language", "user_segment"]
-    
+
     df_clean = df.copy()
     df_clean["treatment"] = (df_clean[treatment_col] == treatment_value).astype(int)
 
@@ -189,7 +189,7 @@ def estimate_ate_propensity_score_matching(
         "ci_95_lower": ci_lower,
         "ci_95_upper": ci_upper,
         "n_matched_pairs": len(matched_pairs),
-        "interpretation": f"Using {treatment_value} increases {outcome_col} by {ate:.1%} (95% CI: {ci_lower:.1%} → {ci_upper:.1%})"
+        "interpretation": f"Using {treatment_value} increases {outcome_col} by {ate:.1%} (95% CI: {ci_lower:.1%} -> {ci_upper:.1%})"
     }
 
 
@@ -213,14 +213,14 @@ def regression_adjustment(
        outcome = treatment + covariates
 
     The coefficient on "treatment" tells us:
-       “How much does the treatment change the probability of acceptance,
-        holding everything else constant?”
+       "How much does the treatment change the probability of acceptance,
+        holding everything else constant?"
 
     This is a widely used causal inference technique in industry.
     """
     if covariates is None:
         covariates = ["latency_ms", "suggestion_length", "language", "user_segment"]
-    
+
     df_clean = df.copy()
     df_clean["treatment"] = (df_clean[treatment_col] == treatment_value).astype(int)
 
@@ -285,7 +285,7 @@ def regression_adjustment(
         "ci_95_lower": ci_lower,
         "ci_95_upper": ci_upper,
         "treatment_coefficient": model.coef_[0][0],
-        "interpretation": f"Treatment increases {outcome_col} by {ate:.1%} (95% CI: {ci_lower:.1%} → {ci_upper:.1%})"
+        "interpretation": f"Treatment increases {outcome_col} by {ate:.1%} (95% CI: {ci_lower:.1%} -> {ci_upper:.1%})"
     }
 
 
@@ -303,14 +303,14 @@ def analyze_latency_impact(df: pd.DataFrame) -> Dict:
     So we ask:
         "How does acceptance probability change when latency increases?"
 
-    Logistic regression gives a coefficient β for latency.
-    We convert β into a more intuitive metric:
-        → Change in acceptance probability per 100 ms
+    Logistic regression gives a coefficient beta for latency.
+    We convert beta into a more intuitive metric:
+        -> Change in acceptance probability per 100 ms
     """
     df_clean = df.copy()
     df_encoded = pd.get_dummies(
-        df_clean, 
-        columns=["language", "user_segment", "model_version"], 
+        df_clean,
+        columns=["language", "user_segment", "model_version"],
         drop_first=True
     )
 

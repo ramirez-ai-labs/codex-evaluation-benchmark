@@ -31,11 +31,11 @@ def load_telemetry_data(csv_path: str = None) -> pd.DataFrame:
     """Load telemetry data."""
     if csv_path is None:
         root = Path(__file__).parent.parent
-        csv_path = root / "developer-telemetry-simulation" / "telemetry_events.csv"
-    
+        csv_path = root / "01-developer-telemetry-simulation" / "telemetry_events.csv"
+
     if not Path(csv_path).exists():
         raise FileNotFoundError(f"Telemetry data not found at {csv_path}")
-    
+
     return pd.read_csv(csv_path)
 
 
